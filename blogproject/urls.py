@@ -26,7 +26,7 @@ from blog_post.views import index
 urlpatterns = [
     path('blog_post/', include('blog_post.urls')),
     path('admin/', admin.site.urls),
-]
+] 
 
 
 

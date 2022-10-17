@@ -16,26 +16,12 @@
           </div>
           <ul class="nav navbar-nav">
             <li class="active"><a href="/blog_post/">Блог</a></li>
-            <li><a href="{% url 'about' %}">Обо мне</a></li>
+            <li><a href="#">Обо мне</a></li>
           </ul>
         </div>
       </nav>
-
-
-    <h1>Posts</h1>
-    <h2>Рубрика : {{ current_rubric.name }}</h2>
-    <div>
-        <a href="{% url 'index' %}">Main</a>
-        {% for rubric in rubrics %}
-        <a href="{% url 'by_rubric' rubric.pk %}">{{ rubric.name }}</a>
-        {% endfor %}
-    </div>
-    {% for p in posts %}
-    <div>
-        <h3>{{ p.nickname }}</h3>
-        <p>{{ p.content }}</p>
-        <p>{{ p.published|date:"d.m.Y H:i:s" }}</p>
-    </div>
-    {% endfor %}
+      <div>Здесь будет страница "Обо мне"</div>
+    
+    
 </body>
 </html>

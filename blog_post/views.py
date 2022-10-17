@@ -22,3 +22,15 @@ def by_rubric(request, rubric_id):
     context = {'posts': posts, 'rubrics':rubrics,
                 'current_rubric': current_rubric}
     return render(request, 'by_rubric.html', context)
+
+def by_post(request, post_id):
+    # do the same as by_rubric to render the html with one post
+    posts = Post.objects.all()
+    current_post = Post.objects.get(pk=post_id)
+    # how to get the rubric of the post????
+    current_rubric = current_post.rubric
+    context = {'current_post': current_post, 'current_rubric': current_rubric}
+    return render(request, 'by_post.html', context)
+
+def about(request):
+    return render(request, 'about.html')
